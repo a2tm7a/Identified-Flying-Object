@@ -20,6 +20,13 @@ var port = process.env.PORT || 8080;        // set our port
 // =============================================================================
 var router = express.Router();              // get an instance of the express Router
 
+// Adding ar-drone files
+var arDrone = require('ar-drone');
+
+//Making a cliet for ARDrone
+var client_arDrone = arDrone.createClient();
+
+
 // on routes that end in /takeoff
 // ----------------------------------------------------
 router.route('/takeoff')
@@ -30,6 +37,12 @@ router.route('/takeoff')
 		{
 			console.log("Takeoff");
 			res.json({message : "Aaye aaye! Captain."});
+			client_arDrone.takeoff();
+		}
+		else
+		{
+			console.log("Wrong Password");
+			res.json({message : "Wrong Password Captain." });
 		}
 		
 	});
@@ -45,7 +58,14 @@ router.route('/land')
                 {
 			console.log("Land");
                         res.json({message : "Fasten your Seat belts. We are going down."});
+			client_arDrone.land();
                 }
+		else
+		{
+			console.log("Wrong Password");
+			res.json({message : "Check Your Password"});
+		}
+
 
         });
 
