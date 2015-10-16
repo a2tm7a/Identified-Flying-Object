@@ -31,21 +31,18 @@ var client_arDrone = arDrone.createClient();
 // ----------------------------------------------------
 router.route('/takeoff')
 	//create a takeoff (accessed at POST http://localhost:8080/api/takeoff)
-	.post(function(req, res){
-		var password = req.body.password;
-		if(password == "DroneFly")
-		{
-			console.log("Takeoff");
-			res.json({message : "Aaye aaye! Captain."});
-			client_arDrone.takeoff();
-		}
-		else
-		{
-			console.log("Wrong Password");
-			res.json({message : "Wrong Password Captain." });
-		}
-		
-	});
+	 .post(function(req, res){
+	 	console.log("Takeoff");
+                res.json({message : "Aaye aaye! Captain."});
+                client_arDrone.takeoff();
+
+         })
+         //create a takeoff (accessed at GET http://localhost:8080/api/takeoff)
+	        .get(function(req, res){
+                 console.log("Takeoff");
+                 res.json({message : "Aaye aaye! Captain."});
+                 client_arDrone.takeoff();
+         });
 
 
 // on routes that end in /land
@@ -53,21 +50,18 @@ router.route('/takeoff')
 router.route('/land')
         //create a land (accessed at POST http://localhost:8080/api/land)
         .post(function(req, res){
-                var password = req.body.password;
-                if(password == "DroneFly")
-                {
-			console.log("Land");
-                        res.json({message : "Fasten your Seat belts. We are going down."});
-			client_arDrone.land();
-                }
-		else
-		{
-			console.log("Wrong Password");
-			res.json({message : "Check Your Password"});
-		}
-
-
-        });
+                console.log("Land");
+                res.json({message : "Fasten your Seat belts. We are going down."});
+		client_arDrone.land();
+                
+        })
+	//create a land (accessed at GET http://localhost:8080/api/land)
+	.get(function(req, res){
+		console.log("Land");
+		res.json({message : "Fasten your Seat belts. We are going down. "});
+		client_arDrone.land();
+		
+	});
 
 
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
