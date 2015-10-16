@@ -172,9 +172,13 @@ namespace VitruviusTest
                     break;
                 case GestureType.ZoomIn:
                     Console.WriteLine("ZI");
+                    request.send_request("/forward");
+                    Console.WriteLine("Winter is Coming!");
                     break;
                 case GestureType.ZoomOut:
                     Console.WriteLine("ZO");
+                    request.send_request("/back");
+                    Console.WriteLine("You know nothing Jon Snow.");
                     break;
                 default:
                     break;
