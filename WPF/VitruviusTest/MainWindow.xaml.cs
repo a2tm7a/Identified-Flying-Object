@@ -16,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace VitruviusTest
 {
     /// <summary>
@@ -135,11 +136,16 @@ namespace VitruviusTest
 
         void GestureController_GestureRecognized(object sender, GestureEventArgs e)
         {
-            // Do something according to the type of the gesture.
+            MyHttpClient request = new MyHttpClient();
+           
+            //Do something according to the type of the gesture.
             switch (e.GestureType)
             {
+
                 case GestureType.JoinedHands:
                     Console.WriteLine("JH");
+                    request.send_request("/takeoff");
+                    Console.WriteLine("Aaye aaye! Captain.");
                     break;
                 case GestureType.Menu:
                     Console.WriteLine("Menu");
@@ -161,6 +167,8 @@ namespace VitruviusTest
                     break;
                 case GestureType.WaveRight:
                     Console.WriteLine("WR");
+                    request.send_request("/land");
+                    Console.WriteLine("Au Revoir");
                     break;
                 case GestureType.ZoomIn:
                     Console.WriteLine("ZI");
