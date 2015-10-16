@@ -73,6 +73,18 @@ router.route('/forward')
 		client_arDrone.front(0.5);
 
 		});
+
+// on routes that end in /back
+// ----------------------------------------------------
+router.route('/back')
+	//create a forward (accessed at GET http://localhost:8080/api/back)
+	.get(function(req,res){
+		console.log("Back");
+		res.json({message : "You know nothing Jon Snow."});
+		client_arDrone.back(0.5);
+
+		});
+
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
 router.get('/', function(req, res) {
     res.json({ message: 'hooray! welcome to our api!' });
