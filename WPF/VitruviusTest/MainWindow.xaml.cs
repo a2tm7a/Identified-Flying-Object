@@ -139,7 +139,7 @@ namespace VitruviusTest
             switch (e.GestureType)
             {
                 case GestureType.JoinedHands:
-                    Console.WriteLine("Namaste!");
+                    Console.WriteLine("Namaste! Welcome Aboard");
                     break;
                 case GestureType.Menu:
                     break;
