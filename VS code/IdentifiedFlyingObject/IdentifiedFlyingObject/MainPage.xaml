@@ -8,6 +8,13 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBox x:Name="textbox1" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Margin="636,268,0,0"  />
+        <Button x:Name="Move_Forward" Content="Forward" HorizontalAlignment="Left" Margin="633,170,0,0" VerticalAlignment="Top" />
+        <Button x:Name="Move_Left" Content="Left" HorizontalAlignment="Left" Margin="475,265,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Move_Right" Content="Right" Margin="795,265,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Move_Backward" Content="Backward" HorizontalAlignment="Left" Margin="633,359,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Takeoff" Content="Takeoff" HorizontalAlignment="Left" Margin="1119,187,0,0" VerticalAlignment="Top" Click="Takeoff_Click"/>
+        <Button x:Name="Land" Content="Land" HorizontalAlignment="Left" Margin="1119,265,0,0" VerticalAlignment="Top" Click="Land_Click"/>
 
     </Grid>
 </Page>
