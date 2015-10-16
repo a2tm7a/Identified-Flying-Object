@@ -139,26 +139,34 @@ namespace VitruviusTest
             switch (e.GestureType)
             {
                 case GestureType.JoinedHands:
-                    Console.WriteLine("Namaste! Welcome Aboard");
+                    Console.WriteLine("JH");
                     break;
                 case GestureType.Menu:
+                    Console.WriteLine("Menu");
                     break;
                 case GestureType.SwipeDown:
+                    Console.WriteLine("SD");
                     break;
                 case GestureType.SwipeLeft:
-                    Console.WriteLine("BYE!");
+                    Console.WriteLine("Sl");
                     break;
                 case GestureType.SwipeRight:
+                    Console.WriteLine("SR");
                     break;
                 case GestureType.SwipeUp:
+                    Console.WriteLine("SU");
                     break;
                 case GestureType.WaveLeft:
+                    Console.WriteLine("WL");
                     break;
                 case GestureType.WaveRight:
+                    Console.WriteLine("WR");
                     break;
                 case GestureType.ZoomIn:
+                    Console.WriteLine("ZI");
                     break;
                 case GestureType.ZoomOut:
+                    Console.WriteLine("ZO");
                     break;
                 default:
                     break;
