@@ -58,12 +58,21 @@ router.route('/land')
 	//create a land (accessed at GET http://localhost:8080/api/land)
 	.get(function(req, res){
 		console.log("Land");
-		res.json({message : "Fasten your Seat belts. We are going down. "});
+		res.json({message : "Fasten your Seat belts. We are going down."});
 		client_arDrone.land();
 		
 	});
 
+// on routes that end in /forward
+// ----------------------------------------------------
+router.route('/forward')
+	//create a forward (accessed at GET http://localhost:8080/api/forward)
+	.get(function(req,res){
+		console.log("Forward");
+		res.json({message : "If you are a rider, the number one thing to do is to move forward."});
+		client_arDrone.front(0.5);
 
+		});
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
 router.get('/', function(req, res) {
     res.json({ message: 'hooray! welcome to our api!' });
