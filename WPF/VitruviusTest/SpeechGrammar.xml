@@ -1,0 +1,19 @@
+﻿<grammar version="1.0" xml:lang="en-CA" root="rootRule" tag-format="semantics/1.0-literals" xmlns="http://www.w3.org/2001/06/grammar">
+  <rule id="rootRule">
+    <one-of>
+      <item>
+        <tag>LAND</tag>
+        <one-of>
+          <item> land </item>
+        </one-of>
+      </item>
+      <item>
+        <tag>STOP</tag>
+        <one-of>
+          <item> stop </item>
+        </one-of>
+      </item>
+      
+    </one-of>
+  </rule>
+</grammar>
