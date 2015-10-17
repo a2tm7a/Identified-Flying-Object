@@ -88,11 +88,22 @@ router.route('/back')
 // on routes that end in /up
 // ----------------------------------------------------
 router.route('/up')
-	//create a forward (accessed at GET http://localhost:8080/api/back)
+	//create a forward (accessed at GET http://localhost:8080/api/up)
 	.get(function(req,res){
 		console.log("Up");
 		res.json({message : "Stay High All The Time!"});
 		client_arDrone.up(0.5);
+
+		});
+
+// on routes that end in /right
+// ----------------------------------------------------
+router.route('/right')
+	//create a forward (accessed at GET http://localhost:8080/api/right)
+	.get(function(req,res){
+		console.log("Right");
+		res.json({message : "Idhar chala mai udhar chala (right :P)"});
+		client_arDrone.right(0.5);
 
 		});
 

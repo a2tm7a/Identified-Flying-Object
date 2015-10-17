@@ -158,6 +158,8 @@ namespace VitruviusTest
                     break;
                 case GestureType.SwipeRight:
                     Console.WriteLine("SR");
+                    request.send_request("/right");
+                    Console.WriteLine("Idhar chala mai udhar chala (right :P)");
                     break;
                 case GestureType.SwipeUp:
                     Console.WriteLine("SU");
