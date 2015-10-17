@@ -85,6 +85,17 @@ router.route('/back')
 
 		});
 
+// on routes that end in /up
+// ----------------------------------------------------
+router.route('/up')
+	//create a forward (accessed at GET http://localhost:8080/api/back)
+	.get(function(req,res){
+		console.log("Up");
+		res.json({message : "Stay High All The Time!"});
+		client_arDrone.up(0.5);
+
+		});
+
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
 router.get('/', function(req, res) {
     res.json({ message: 'hooray! welcome to our api!' });

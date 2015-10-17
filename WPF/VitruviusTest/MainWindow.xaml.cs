@@ -161,6 +161,8 @@ namespace VitruviusTest
                     break;
                 case GestureType.SwipeUp:
                     Console.WriteLine("SU");
+                    request.send_request("/up");
+                    Console.WriteLine("Stay High All The Time!");
                     break;
                 case GestureType.WaveLeft:
                     Console.WriteLine("WL");
